@@ -57,8 +57,7 @@ My_Persistent_Harrier = db_Powers_Battlemind.Persistent_Harrier(44);
 ##51-60 Class - attack
 #--------------------
 #51
-My_Bulls_Strength = db_Powers_Battlemind.Bulls_Strength(51);
-My_Bulls_Strength.Update({"emote": Attribute("character_name") +" grins and swings with a casual grace."});
+My_Intellect_Snap = db_Powers_Battlemind.Intellect_Snap(51);
 #52
 My_Concussive_Spike = db_Powers_Battlemind.Concussive_Spike(52);
 #53
@@ -77,7 +76,7 @@ My_Iron_Tomb = db_Powers_Battlemind.Iron_Tomb(59);
 My_Feather_Step = db_Powers_Battlemind.Feather_Step(61);
 My_Feather_Step.Update({"emote": "".join(("With a focused thought, ", Attribute("character_name"), " lifts slightly off the ground on a current of psionic energy."))});
 #62
-My_Physicians_Care = db_Powers_Skill.Physicians_Care(62);
+My_Winged_Weapon = db_Powers_Battlemind.Winged_Weapon(62);
 #63
 My_Enter_The_Crucible = db_Powers_Skill.Enter_The_Crucible(63);
 My_Enter_The_Crucible.Update({"emote": Attribute("character_name") +" grins. Finally, a worthy challenge."});

@@ -183,6 +183,32 @@ class Psionic_Speed(Power_Normal):
     #end __init__
 #end Psionic_Speed
 
+#Level 13
+
+class Intellect_Snap(Power_Normal):
+    """Intellect Snap | Battlemind Attack 13"""
+    def __init__(self, power_num):
+        """Initialize self.
+        power_num : the power number used for Power attributes
+        """
+        Power_Normal.__init__(self, power_num, "atwill");
+        self.Update(
+            {"emote":   "Your weapon channels your psychic fury to distract and hinder your foe.",
+             "keywords":"Augmentable, Psionic, Psychic, Weapon",
+             "target":  "One creature",
+             "attack":  self.Attack_Weapon(),
+             "damage":  self.Damage_Weapon_Mod("0", "psychic"),
+             "critical":self.Damage_Weapon_Mod_Crit("0", "psychic"),
+             "hiteffect":   "The target is dazed until the start of your next turn.",
+             "augmenttoggle":   RollQuery_Augment("1","4"),
+             "augment1hiteffect":   "As above, and you are no longer dazed or marked.",
+             "augment4damage":  self.Damage_Weapon_Mod("2", "psychic"),
+             "augment4critical":self.Damage_Weapon_Mod_Crit("2", "psychic"),
+             "augment4hiteffect":   "The target is dazed until the end of your next turn. In addition, you or one ally within 5 squares of you can make a saving throw against an effect that dazes or stuns.",
+             });
+    #end __init__
+#end Intellect_Snap
+
 
 ##DAILY ATTACK POWERS
 #--------------------
@@ -294,6 +320,21 @@ class Feather_Step(Power_Normal):
 #end Feather_Step
 
 #Level 6
+
+class Winged_Weapon(Power_Normal):
+    """Winged Weapon | Battlemind Utility 6"""
+    def __init__(self, power_num):
+        """Initialize self.
+        power_num : the power number used for Power attributes
+        """
+        Power_Normal.__init__(self, power_num, "encounter");
+        self.Update(
+            {"emote":   "You channel psionic energy into your weapon, adjusting the rules of nature so that the weapon will slide through the air as if on wings when you hurl it.",
+             "keywords":"Psionic",
+             "effect":  "Choose a weapon you are holding. The next melee attack you make with that weapon before the end of your next turn becomes a ranged attack with a range of 10. The weapon returns to your hand after you make that attack."
+             });
+    #end __init__
+#end Winged_Weapon
 
 #Level 10
 
