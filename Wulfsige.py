@@ -13,6 +13,16 @@ from roll20 import db_Powers_Skill
 #01
 My_Melee_Basic_Attack = db_Powers_Core.Melee_Basic_Attack_Trained(1, "constitution");
 My_Melee_Basic_Attack.Update({"emote": "Hammer time."});
+#02
+My_Ranged_Basic_Attack_Light = db_Powers_Core.Ranged_Basic_Attack(2);
+My_Ranged_Basic_Attack_Light.Update({"emote": Attribute("character_name") +" resorts to the simple attack they learned when they first picked up a ranged weapon."});
+#03
+My_Ranged_Basic_Attack_Heavy = db_Powers_Core.Ranged_Basic_Attack(3);
+My_Ranged_Basic_Attack_Heavy.Update({"emote": Attribute("character_name") +" resorts to the simple attack they learned when they first picked up a ranged weapon."});
+#09
+My_Second_Wind = db_Powers_Core.Second_Wind(9);
+#10
+My_Action_Point = db_Powers_Core.Action_Point(10);
 
 ##11-20 Background
 #--------------------

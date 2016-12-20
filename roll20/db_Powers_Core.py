@@ -68,3 +68,29 @@ class Ranged_Basic_Attack(_Basic_Attack):
              });
     #end __init__
 #end Ranged_Basic_Attack
+
+class Second_Wind(Power_Normal):
+    """Second Wind"""
+    def __init__(self, power_num):
+        """Initialize self.
+        power_num : the power number used for Power attributes
+        """
+        Power_Normal.__init__(self, power_num, "encounter");
+        self.Update(
+            {"effect":  "".join(("Spend a healing surge to regain [[", Attribute("surge-value"), "]] hit-points and gain a +2 bonus to all defenses until the start of your next turn.")),
+             });
+    #end __init__
+#end Second_Wind
+
+class Action_Point(Power_Normal):
+    """Action Point"""
+    def __init__(self, power_num):
+        """Initialize self.
+        power_num : the power number used for Power attributes
+        """
+        Power_Normal.__init__(self, power_num, "encounter");
+        self.Update(
+            {"effect":  "Gain a standard action this turn.",
+             });
+    #end __init__
+#end Action_Point
